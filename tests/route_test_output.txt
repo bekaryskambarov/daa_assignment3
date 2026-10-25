@@ -1,0 +1,21 @@
+A: reachable target (example from the assignment)
+  distance=[0, 3, -4, 0, null] parent_edge=[-1, 0, 2, 3, -1]
+  reconstructRoute(source=0, target=3) = [0, 1, 2, 3]
+  edge ids=[0, 2, 3], weight sum=0, distance=0
+B: target is the source
+  distance=[0, 3, -4, 0, null] parent_edge=[-1, 0, 2, 3, -1]
+  reconstructRoute(source=0, target=0) = [0]
+  edge ids=[], weight sum=0, distance=0
+C: unreachable target
+  distance=[0, 3, -4, 0, null] parent_edge=[-1, 0, 2, 3, -1]
+  reconstructRoute(source=0, target=4) = []
+  unreachable target -> empty list
+D: parallel edges with different weights
+  distance=[0, 2] parent_edge=[-1, 1]
+  reconstructRoute(source=0, target=1) = [0, 1]
+  edge ids=[1], weight sum=2, distance=2
+E: tied shortest routes (0->2 and 0->1->2 both cost 6)
+  distance=[0, 5, 6] parent_edge=[-1, 0, 3]
+  reconstructRoute(source=0, target=2) = [0, 2]
+  edge ids=[3], weight sum=6, distance=6
+ALL ROUTE CHECKS PASSED
